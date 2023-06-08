@@ -1,0 +1,3 @@
+/home/andre/CLionProjects/CinemaApplication/cmake-build-debug/CMakeFiles/CinemaApplication.dir
+/home/andre/CLionProjects/CinemaApplication/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/andre/CLionProjects/CinemaApplication/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+# ninja log v5
+364	464	1684838856992036683	CinemaApplication	183b1e4a78c13ba6
+1	364	1684838856892035381	CMakeFiles/CinemaApplication.dir/sources/Cinema.cpp.o	1274c053a878f978
+0	400	1684838835327754519	CMakeFiles/CinemaApplication.dir/main.cpp.o	d583d339a03b183b
