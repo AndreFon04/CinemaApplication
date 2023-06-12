@@ -5,15 +5,17 @@
 #include <string>
 #include "CinemaOld.h"
 #include "Bilhete.h"
+#include "views/WelcomeScreen.h"
 
 using namespace std;
 
 
 
 
-int WelcomeScreen() {
+int WelcomeScreen()
+{
     int c;
-    WelcomeScreen Welcome;
+    class WelcomeScreen Welcome;
     cout << "\tPress 1 to log into your account\n\n";
     cout << "\tPress 2 to create an account\n\n";
     cout << "\tPress 3 to change your username\n\n";

@@ -10,6 +10,7 @@
 
 using namespace std;
 
+/*
 class WelcomeScreen
 {
 private:
@@ -23,7 +24,7 @@ public:
     static string changeUsername();
 };
 
-
+*/
 
 
 
