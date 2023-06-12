@@ -6,6 +6,10 @@
 #define CINEMAAPPLICATION_CINEMA_H
 
 #include <string>
+#include "UserContainer.h"
+#include "MovieContainer.h"
+#include "ShowtimeContainer.h"
+
 
 using namespace std;
 

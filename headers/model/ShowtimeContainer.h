@@ -5,7 +5,8 @@
 #ifndef CINEMAAPPLICATION_SHOWTIMECONTAINER_H
 #define CINEMAAPPLICATION_SHOWTIMECONTAINER_H
 
-
+#include <list>
+#include "Showtime.h"
 #include <string>
 
 class ShowtimeContainer

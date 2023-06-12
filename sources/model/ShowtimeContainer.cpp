@@ -9,12 +9,14 @@ using namespace std;
 
 list<Showtime>::iterator ShowtimeContainer::search(const string& name)
 {
-    return NULL;
+    list<Showtime>::iterator it = this->showtimes.begin();
+    return it;
 }
 
 list<Showtime> ShowtimeContainer::getAll()
 {
-    return NULL;
+    list<Showtime> newlist (this->showtimes);
+    return newlist;
 }
 
 Showtime* ShowtimeContainer::get(const string& name)

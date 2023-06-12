@@ -5,13 +5,14 @@
 #ifndef CINEMAAPPLICATION_VIEW_H
 #define CINEMAAPPLICATION_VIEW_H
 
+
 class View
 {
 
 private:
 
 public:
-    WelcomeScreen();
+    int WelcomeScreen();
 
 
 

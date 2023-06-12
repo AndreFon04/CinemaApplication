@@ -2,19 +2,21 @@
 // Created by andre on 11-06-2023.
 //
 
-#include "UserContainer.h"
+#include "model/UserContainer.h"
 #include <string>
 
 using namespace std;
 
 list<User>::iterator UserContainer::search(const string& username)
 {
-    return NULL;
+    list<User>::iterator it = this->users.begin();
+    return it;
 }
 
 list<User> UserContainer::getAll()
 {
-    return NULL;
+    list<User> newlist (this->users);
+    return newlist;
 }
 
 User* UserContainer::get(const string& username)

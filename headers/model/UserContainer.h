@@ -5,7 +5,8 @@
 #ifndef CINEMAAPPLICATION_USERCONTAINER_H
 #define CINEMAAPPLICATION_USERCONTAINER_H
 
-
+#include "model/User.h"
+#include <list>
 #include <string>
 
 class UserContainer

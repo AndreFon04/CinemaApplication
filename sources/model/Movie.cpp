@@ -37,6 +37,7 @@ int Movie::getMinimalAge()
 
 void Movie::setTitle(const string& title)
 {
+    this->title = title;
     return;
 }
 

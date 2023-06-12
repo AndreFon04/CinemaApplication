@@ -98,7 +98,8 @@
 				47,
 				48,
 				49,
-				51
+				51,
+				53
 			]
 		}
 	],
@@ -156,7 +157,8 @@
 				47,
 				48,
 				49,
-				51
+				51,
+				53
 			]
 		},
 		{
@@ -188,7 +190,8 @@
 				44,
 				45,
 				46,
-				50
+				50,
+				52
 			]
 		}
 	],
@@ -478,6 +481,17 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "sources/views/View.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/views/Utils.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/views/Utils.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

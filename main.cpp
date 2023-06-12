@@ -1,7 +1,7 @@
 #include <iostream>
-#include <string>
 #include "model/Cinema.h"
 #include "Bilhete.h"
+#include "controllers/Controller.h"
 
 using namespace std;
 
@@ -9,9 +9,12 @@ int main()
 {
   Cinema cinema("Cineclube ISEP");
 
-  Controller controller (& cinema);
+  //MockData mock;
+  //mock.generateData(cinema);
+
+  Controller controller (cinema);
   controller.run();
 
-  cout << "O programa terminou. Volte sempre!" << endl;
+  cout << "\nO programa terminou. Volte sempre!" << endl;
   return 0;
 }

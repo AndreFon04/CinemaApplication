@@ -5,6 +5,9 @@
 #ifndef CINEMAAPPLICATION_MOVIECONTAINER_H
 #define CINEMAAPPLICATION_MOVIECONTAINER_H
 
+
+#include <list>
+#include "Movie.h"
 #include <string>
 
 class MovieContainer

@@ -9,7 +9,7 @@
 
 using namespace std;
 
-
+/*
 
 
 int WelcomeScreen()
@@ -130,8 +130,6 @@ string WelcomeScreen::createAdmin()
 string WelcomeScreen::changeUsername()
 {
 
-
-
-
 }
 
+*/

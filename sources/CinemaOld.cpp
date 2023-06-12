@@ -5,7 +5,7 @@
 #include "CinemaOld.h"
 
 using namespace std;
-
+/*
 WelcomeScreen WelcomeScreen::Welcome()
 {
     cout << "\n";
@@ -99,3 +99,4 @@ string WelcomeScreen::changeUsername()
 
 
 
+*/

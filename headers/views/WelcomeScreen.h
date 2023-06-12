@@ -10,13 +10,14 @@
 
 using namespace std;
 
-
+/*
 class WelcomeScreen
 {
 private:
     WelcomeScreen Welcome();
 
 public:
+    WelcomeScreen();
     static char Login();
     static string LoginAdmin();
     static string createClient();
@@ -24,7 +25,7 @@ public:
     static string changeUsername();
 };
 
-
+*/
 
 
 
