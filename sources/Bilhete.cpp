@@ -107,6 +107,9 @@ int Bilhete::Date()
 
 int Bilhete::Row()
 {
+
+
+
     return 1;
 }
 

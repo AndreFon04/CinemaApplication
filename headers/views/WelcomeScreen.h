@@ -1,14 +1,15 @@
 //
-// Created by andre on 23-05-2023.
+// Created by andre on 10-06-2023.
 //
 
-#ifndef CINEMAAPPLICATION_CINEMA_H
-#define CINEMAAPPLICATION_CINEMA_H
+#ifndef CINEMAAPPLICATION_WELCOMESCREEN_H
+#define CINEMAAPPLICATION_WELCOMESCREEN_H
 
 #include <iostream>
 #include <cstring>
 
 using namespace std;
+
 
 class WelcomeScreen
 {
@@ -28,25 +29,4 @@ public:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#endif //CINEMAAPPLICATION_CINEMA_H
+#endif //CINEMAAPPLICATION_WELCOMESCREEN_H

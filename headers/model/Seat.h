@@ -1,0 +1,8 @@
+//
+// Created by andre on 10-06-2023.
+//
+
+#ifndef CINEMAAPPLICATION_SEAT_H
+#define CINEMAAPPLICATION_SEAT_H
+
+#endif //CINEMAAPPLICATION_SEAT_H
