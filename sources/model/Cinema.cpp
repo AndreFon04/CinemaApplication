@@ -2,7 +2,7 @@
 // Created by andre on 11-06-2023.
 //
 
-#include "model/Cinema.h"
+#include "Cinema.h"
 
 using namespace std;
 

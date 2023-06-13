@@ -2,10 +2,14 @@
 // Created by andre on 10-06-2023.
 //
 
-#include "model/Showtime.h"
+#include "Showtime.h"
 
-Showtime::Showtime(const Movie& movie, const string& sessionName, int room, int availableSeats)
+Showtime::Showtime(Movie *movie, const string& sessionName, int room, int availableSeats)
 {
+    this->movie = (Movie *) movie;
+    this->sessionName = sessionName;
+    this->room = room;
+    this->availableSeats = availableSeats;
     return;
 }
 

@@ -14,15 +14,19 @@ class User
 private:
     string name;
     string email;
+    string pwd;
     //PaymentDetails* payment_info;
 
 public:
-    User(const string& name, const string& email);
+    User(const string& name, const string& email, const string& pwd);
     string getName();
     string getEmail();
+    string getPwd();
     //PaymentDetails getPaymentInfo();
+    bool validPwd(const string& pwd);
     void setName(const string& name);
     void setEmail(const string& email);
+    void setPwd(const string& pwd);
     //void setPaymentInfo(PaymentDetails payment_info);
 };
 

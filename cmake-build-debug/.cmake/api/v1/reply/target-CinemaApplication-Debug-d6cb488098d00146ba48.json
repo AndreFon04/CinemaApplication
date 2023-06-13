@@ -25,19 +25,37 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 20,
+				"line" : 126,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 8,
+				"line" : 14,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 9,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 93,
 				"parent" : 0
 			}
 		]
@@ -55,11 +73,39 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/andre/CLionProjects/CinemaApplication/headers"
+					"path" : "/home/andre/CLionProjects/CinemaApplication/mock"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/andre/CLionProjects/CinemaApplication/sources"
+					"path" : "/home/andre/CLionProjects/CinemaApplication/headers/controllers"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/andre/CLionProjects/CinemaApplication/sources/controllers"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/andre/CLionProjects/CinemaApplication/headers/exceptions"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/andre/CLionProjects/CinemaApplication/sources/exceptions"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/andre/CLionProjects/CinemaApplication/headers/model"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/andre/CLionProjects/CinemaApplication/sources/model"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/andre/CLionProjects/CinemaApplication/headers/views"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/andre/CLionProjects/CinemaApplication/sources/views"
 				}
 			],
 			"language" : "CXX",
@@ -76,25 +122,25 @@
 				0,
 				2,
 				4,
-				5,
-				7,
+				6,
 				8,
-				9,
-				10,
-				11,
-				12,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
 				24,
 				25,
-				26,
-				27,
-				28,
-				29,
+				33,
 				37,
 				38,
 				39,
-				40,
-				41,
-				43,
+				45,
+				46,
 				47,
 				48,
 				49,
@@ -135,25 +181,25 @@
 				0,
 				2,
 				4,
-				5,
-				7,
+				6,
 				8,
-				9,
-				10,
-				11,
-				12,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
 				24,
 				25,
-				26,
-				27,
-				28,
-				29,
+				33,
 				37,
 				38,
 				39,
-				40,
-				41,
-				43,
+				45,
+				46,
 				47,
 				48,
 				49,
@@ -167,29 +213,29 @@
 			[
 				1,
 				3,
-				6,
+				5,
+				7,
+				9,
+				10,
+				11,
+				12,
 				13,
 				14,
-				15,
-				16,
-				17,
-				18,
-				19,
-				20,
-				21,
-				22,
-				23,
+				26,
+				27,
+				28,
+				29,
 				30,
 				31,
 				32,
-				33,
 				34,
 				35,
 				36,
+				40,
+				41,
 				42,
+				43,
 				44,
-				45,
-				46,
 				50,
 				52
 			]
@@ -227,14 +273,85 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "headers/views/Utils.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "sources/controllers/Controller.cpp",
+			"path" : "sources/views/Utils.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "headers/controllers/Controller.h",
+			"path" : "headers/views/View.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/views/View.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/views/WelcomeScreen.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/views/MovieListView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/views/ShowTimeView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/views/SeatSelectionView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/views/PaymentView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/views/ConfirmationView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/views/PaymentView.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/views/ConfirmationView.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/views/WelcomeScreen.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/views/MovieListView.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/views/ShowTimeView.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
@@ -304,132 +421,6 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "headers/exceptions/UserNotFoundException.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/exceptions/InsuficcientCashException.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/exceptions/RoomAlreadyFullException.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/exceptions/InvalidCreditCardException.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/exceptions/SeatNoLongerAvailableException.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/exceptions/SeatNoLongerAvailableException.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/exceptions/InvalidCreditCardException.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/exceptions/RoomAlreadyFullException.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/exceptions/InsuficcientCashException.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/exceptions/UserNotFoundException.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "mock/MockData.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "mock/MockData.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/views/WelcomeScreen.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/views/MovieListView.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/views/ShowTimeView.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/views/SeatSelectionView.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/views/PaymentView.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "headers/views/ConfirmationView.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/views/PaymentView.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/views/ConfirmationView.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/views/WelcomeScreen.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/views/MovieListView.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "sources/views/ShowTimeView.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
 			"path" : "headers/model/Cinema.h",
 			"sourceGroupIndex" : 1
 		},
@@ -474,24 +465,79 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "headers/views/View.h",
+			"path" : "headers/exceptions/UserNotFoundException.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/exceptions/InsufficientCashException.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/exceptions/RoomAlreadyFullException.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/exceptions/InvalidCreditCardException.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/exceptions/SeatNoLongerAvailableException.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "sources/views/View.cpp",
+			"path" : "sources/exceptions/SeatNoLongerAvailableException.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "headers/views/Utils.h",
+			"compileGroupIndex" : 0,
+			"path" : "sources/exceptions/InvalidCreditCardException.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/exceptions/RoomAlreadyFullException.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/exceptions/InsufficientCashException.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sources/exceptions/UserNotFoundException.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/controllers/Controller.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "sources/views/Utils.cpp",
+			"path" : "sources/controllers/Controller.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "mock/MockData.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "mock/MockData.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

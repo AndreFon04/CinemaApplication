@@ -21,7 +21,7 @@ private:
     int availableSeats;
 
 public:
-    Showtime(const Movie& movie, const string& sessionName, int room, int availableSeats);
+    Showtime(Movie *movie, const string& sessionName, int room, int availableSeats);
     Movie* getMovie();
     //datetime getStartSession();
     string getSessionName();

@@ -13,8 +13,7 @@ private:
 
 public:
     int WelcomeScreen();
-
-
+    int menuCinema();
 
 };
 

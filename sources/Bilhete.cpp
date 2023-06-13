@@ -5,10 +5,11 @@
 #include <ctime>
 #include <chrono>
 #include <limits>
-#include "Bilhete.h"
+//#include "Bilhete.h"
 
 using namespace std;
 
+/*
 bool Bilhete::Continue()
 {
     char op;
@@ -131,6 +132,6 @@ string Bilhete::Ticket()
 }
 
 
-
+*/
 
 

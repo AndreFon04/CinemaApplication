@@ -1,7 +1,7 @@
 #include <iostream>
-#include "model/Cinema.h"
-#include "Bilhete.h"
-#include "controllers/Controller.h"
+#include "headers/model/Cinema.h"
+//#include "Bilhete.h"
+#include "headers/controllers/Controller.h"
 
 using namespace std;
 

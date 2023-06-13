@@ -5,9 +5,9 @@
 #ifndef CINEMAAPPLICATION_CONTROLLER_H
 #define CINEMAAPPLICATION_CONTROLLER_H
 
-#include "model/Cinema.h"
-#include "views/View.h"
-
+#include "Cinema.h"
+#include "View.h"
+#include "View.h"
 
 
 class Controller{
@@ -15,8 +15,8 @@ class Controller{
 private:
     Cinema model;
     View view;
-    //void runLogin();
-    //void runInstructors();
+    void runLogin();
+    void runCinema();
 public:
     Controller(Cinema& cinema);
     void run();

@@ -2,7 +2,7 @@
 // Created by andre on 11-06-2023.
 //
 
-#include "model/MovieContainer.h"
+#include "MovieContainer.h"
 #include <string>
 
 using namespace std;

@@ -3,9 +3,9 @@
 //
 #include <iostream>
 #include <string>
-#include "CinemaOld.h"
-#include "Bilhete.h"
-#include "views/WelcomeScreen.h"
+//#include "CinemaOld.h"
+//#include "Bilhete.h"
+#include "WelcomeScreen.h"
 
 using namespace std;
 

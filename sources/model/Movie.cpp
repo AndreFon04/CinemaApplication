@@ -2,11 +2,16 @@
 // Created by andre on 10-06-2023.
 //
 
-#include "model/Movie.h"
+#include "Movie.h"
 
 Movie::Movie(const string& title, const string& description, const string& genre, int duration, int minimalAge)
 {
-    return ;
+    this->title = title;
+    this->description = description;
+    this->genre = genre;
+    this->duration = duration;
+    this->minimalAge = minimalAge;
+    return;
 }
 
 string Movie::getTitle()
@@ -44,24 +49,28 @@ void Movie::setTitle(const string& title)
 
 void Movie::setDescription(const string& description)
 {
+    this->description = description;
     return;
 }
 
 
 void Movie::setGenre(const string& genre)
 {
+    this->genre = genre;
     return;
 }
 
 
 void Movie::setDuration(int duration)
 {
+    this->duration = duration;
     return;
 }
 
 
 void Movie::setMinimalAge(int minimalAge)
 {
+    this->minimalAge = minimalAge;
     return ;
 }
 
