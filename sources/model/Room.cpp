@@ -10,27 +10,32 @@ void Room::CreateRoom() {
     cout << "How many columns would you like this room to have: " << endl;
     cin >> C;
 
-
     for (i = 0; i < R; i++) {
         for (j = 0; j < C; j++) {
             room[i][j] = 'O';
         }
     }
-    cout << "  ";
-    for(i = 0; i < C; i++) {
+
+    cout << "   ";
+    for (i = 0; i < C; i++) {
         cout << alphabet[i] << " ";
     }
-    cout << "\n";
+    cout << endl;
 
     for (i = 0; i < R; i++) {
-        cout << i+1 << " ";
+        cout << " ";
+        if (i + 1 < 10) {
+            cout << " ";         // Pra nº inferiores a 10 damos 2 espaços para que fique alinhado
+        } cout << i + 1 << " ";
         for (j = 0; j < C; j++) {
             cout << room[i][j] << " ";
         }
-        cout << "\n";
+        cout << endl;
     }
-    cout << "    ";
-    for(i = 0; i < (C-2); i++ ) {
+
+    cout << "     ";
+    for (i = 0; i < C-2; i++) {
         cout << "--";
     }
+    cout << "-" << endl;
 }
