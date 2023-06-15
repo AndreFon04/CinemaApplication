@@ -5,6 +5,7 @@
 #ifndef CINEMAAPPLICATION_MOVIE_H
 #define CINEMAAPPLICATION_MOVIE_H
 
+#include "ShowtimeContainer.h"
 #include <string>
 
 using namespace std;
@@ -19,11 +20,11 @@ private:
     int minimalAge;
 public:
     Movie(const string& title, const string& description, const string& genre, int duration, int minimalAge);
-    string getTitle();
-    string getDescription();
-    string getGenre();
-    int getDuration();
-    int getMinimalAge();
+    string getTitle() const;
+    string getDescription() const;
+    string getGenre() const;
+    int getDuration() const;
+    int getMinimalAge() const;
     void setTitle(const string& title);
     void setDescription(const string& description);
     void setGenre(const string& genre);

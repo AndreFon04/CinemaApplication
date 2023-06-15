@@ -43,7 +43,7 @@ const char* Bilhete::SelectedMovie()
         cout << "\nEscolha um filme para assistir:\n\n";
         for (int i = 0; i < 4; i++)
         {
-            cout << i + 1 << "-  " << AvailableMovies[i] << "\n";
+            cout << i + 1 << " -  " << AvailableMovies[i] << "\n";
         }
 
         do {

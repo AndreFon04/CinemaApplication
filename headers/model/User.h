@@ -19,11 +19,12 @@ private:
 
 public:
     User(const string& name, const string& email, const string& pwd);
-    string getName();
-    string getEmail();
-    string getPwd();
-    //PaymentDetails getPaymentInfo();
-    bool validPwd(const string& pwd);
+    User(const User& obj);
+    string getName() const;
+    string getEmail() const;
+    string getPwd() const;
+    //PaymentDetails getPaymentInfo() const;
+    bool isValidPwd(const string& pwd);
     void setName(const string& name);
     void setEmail(const string& email);
     void setPwd(const string& pwd);

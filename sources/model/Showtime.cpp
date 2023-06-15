@@ -4,30 +4,54 @@
 
 #include "Showtime.h"
 
-Showtime::Showtime(Movie *movie, const string& sessionName, int room, int availableSeats)
+Showtime::Showtime(Movie *movie, const string& sessionName, int screen, int availableSeats)
 {
     this->movie = (Movie *) movie;
     this->sessionName = sessionName;
-    this->room = room;
+    this->screen = screen;
     this->availableSeats = availableSeats;
     return;
 }
 
-Movie* Showtime::getMovie()
+Movie* Showtime::getMovie() const
 {
     return this->movie;
 }
 
-//datetime getStartSession(){}
+//datetime getStartSession() const {}
 
 
-string Showtime::getSessionName()
+string Showtime::getSessionName() const
 {
     return this->sessionName;
 }
 
-int Showtime::getAvailableSeats()
+int Showtime::getScreen() const
+{
+    return this->screen;
+}
+
+int Showtime::getAvailableSeats() const
 {
     return this->availableSeats;
 }
 
+void Showtime::setMovie(Movie *movie)
+{
+    this->movie = movie;
+}
+
+void Showtime::setSessionName(const string& sessionName)
+{
+    this->sessionName = sessionName;
+}
+
+void Showtime::setScreen(int screen)
+{
+    this->screen = screen;
+}
+
+void Showtime::setAvailableSeats(int availableSeats)
+{
+    this->availableSeats = availableSeats;
+}

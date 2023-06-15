@@ -20,7 +20,7 @@ public:
     User* get(const string& username);
     void add(const User& obj);
     void remove(const string& username);
-    void update(const string& username, const string& email);
+    void update(const string& username, const string& email, const string& pwd);
 
 };
 

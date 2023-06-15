@@ -1,7 +1,8 @@
 #include <iostream>
-#include "headers/model/Cinema.h"
+#include "Cinema.h"
 //#include "Bilhete.h"
-#include "headers/controllers/Controller.h"
+#include "Controller.h"
+#include "MockData.h"
 
 using namespace std;
 
@@ -9,8 +10,8 @@ int main()
 {
   Cinema cinema("Cineclube ISEP");
 
-  //MockData mock;
-  //mock.generateData(cinema);
+  MockData mock;
+  mock.generateData(cinema);
 
   Controller controller (cinema);
   controller.run();

@@ -10,32 +10,39 @@ User::User(const string& name, const string& email, const string& pwd)
     this->name = name;
     this->email = email;
     this->pwd = pwd;
-    return;
 }
 
-string User::getName()
+User::User(const User& obj)
+{
+    this->name = obj.name;
+    this->email = obj.email;
+    this->pwd = obj.pwd;
+}
+
+string User::getName() const
 {
     return this->name;
 }
 
 
-string User::getEmail()
+string User::getEmail() const
 {
     return this->email;
 }
 
-string User::getPwd() {
+string User::getPwd() const  //to be deleted
+{
     return this->pwd;
 }
 
 /*
-PaymentDetails User::getPaymentInfo()
+PaymentDetails User::getPaymentInfo() const
 {
     return this->payment_info;
 }
 */
 
-bool User::validPwd(const string& pwd)
+bool User::isValidPwd(const string& pwd)
 {
     return this->pwd == pwd;
 }

@@ -16,7 +16,13 @@ private:
     Cinema model;
     View view;
     void runLogin();
-    void runCinema();
+    void runMainMenu();
+    void runMoviesMenu();
+    void runBuyTicketsMenu();
+    void runListSessionsMenu();
+    void runSpecificsMenu();
+    void runFindMovie();
+    void runUpdateUser();
 public:
     Controller(Cinema& cinema);
     void run();

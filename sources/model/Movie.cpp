@@ -14,28 +14,28 @@ Movie::Movie(const string& title, const string& description, const string& genre
     return;
 }
 
-string Movie::getTitle()
+string Movie::getTitle() const
 {
     return this->title;;
 }
 
-string Movie::getDescription()
+string Movie::getDescription() const
 {
     return this->description;
 }
 
-string Movie::getGenre()
+string Movie::getGenre() const
 {
     return this->genre;
 }
 
-int Movie::getDuration()
+int Movie::getDuration() const
 {
     return this->duration;
 }
 
 
-int Movie::getMinimalAge()
+int Movie::getMinimalAge() const
 {
     return this->minimalAge;
 }

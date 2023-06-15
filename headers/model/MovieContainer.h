@@ -19,10 +19,10 @@ private:
 public:
     list<Movie> getAll();
     Movie* get(const string& title);
+    Movie* getOrder(int index);
     void add(const Movie& obj);
     void remove(const string& title);
-    //void update(const string& title, const string& description);
-
+    void update(const string& title, const string& description, const string& genre, int duration, int minimalAge);
 };
 
 #endif //CINEMAAPPLICATION_MOVIECONTAINER_H

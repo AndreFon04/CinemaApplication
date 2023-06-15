@@ -20,8 +20,8 @@ public:
     Showtime* get(const string& name);
     void add(const Showtime& obj);
     void remove(const string& name);
-    //void update(const string& title, const string& description);
-
+    void update(const string &sessionName, Movie *movie, int screen, int availableSeats);
+    list<Showtime> getShowtimesMovie(Movie* movie);
 };
 
 #endif //CINEMAAPPLICATION_SHOWTIMECONTAINER_H

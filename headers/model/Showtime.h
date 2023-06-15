@@ -14,18 +14,23 @@ using namespace std;
 class Showtime
 {
 private:
-    Movie* movie;
-    //datetime startSession;
     string sessionName;
-    int room;
+    Movie *movie;
+    //datetime startSession;
+    int screen;
     int availableSeats;
 
 public:
-    Showtime(Movie *movie, const string& sessionName, int room, int availableSeats);
-    Movie* getMovie();
-    //datetime getStartSession();
-    string getSessionName();
-    int getAvailableSeats();
+    Showtime(Movie *movie, const string& sessionName, int screen, int availableSeats);
+    string getSessionName() const;
+    //datetime getStartSession() const;
+    Movie* getMovie() const;
+    int getScreen() const;
+    int getAvailableSeats() const;
+    void setSessionName(const string& sessionName);
+    void setMovie(Movie *movie);
+    void setScreen(int screen);
+    void setAvailableSeats(int availableSeats);
 };
 
 #endif //CINEMAAPPLICATION_SHOWTIME_H
