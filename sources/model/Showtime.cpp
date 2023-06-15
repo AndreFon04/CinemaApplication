@@ -36,6 +36,12 @@ int Showtime::getAvailableSeats() const
     return this->availableSeats;
 }
 
+
+int Showtime::getShowtimesMovies() const
+{
+    return this->showtimeMovies;
+}
+
 void Showtime::setMovie(Movie *movie)
 {
     this->movie = movie;

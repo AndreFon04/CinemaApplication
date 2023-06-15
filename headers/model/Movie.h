@@ -5,7 +5,6 @@
 #ifndef CINEMAAPPLICATION_MOVIE_H
 #define CINEMAAPPLICATION_MOVIE_H
 
-#include "ShowtimeContainer.h"
 #include <string>
 
 using namespace std;

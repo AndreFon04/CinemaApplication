@@ -100,7 +100,7 @@ void Controller::runMainMenu(){
                 cout << "Escolhida opção 1" << endl;
                 break;
             case 2:
-                runFindMovie();
+                //runFindMovie();
                 cout << "Escolhida opção 2" << endl;
                 break;
             case 3:
@@ -116,6 +116,8 @@ void Controller::runMainMenu(){
 
 void Controller::runMoviesMenu(){
     int op = -1;
+    MovieContainer &container = this->model.getMovieContainer();
+    list<Movie> movies = container.getAll();
     do{
         op=this->view.MoviesMenu(movies);
         switch(op){
@@ -152,6 +154,8 @@ void Controller::runBuyTicketsMenu(){
 
 void Controller::runSpecificsMenu(){
     int op = -1;
+    MovieContainer &container = this->model.getMovieContainer();
+    list<Movie> movies = container.getAll();
     do{
         op=this->view.SpecificsMenu(movies);
         switch(op){

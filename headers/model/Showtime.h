@@ -19,6 +19,7 @@ private:
     //datetime startSession;
     int screen;
     int availableSeats;
+    int showtimeMovies;
 
 public:
     Showtime(Movie *movie, const string& sessionName, int screen, int availableSeats);
@@ -27,6 +28,7 @@ public:
     Movie* getMovie() const;
     int getScreen() const;
     int getAvailableSeats() const;
+    int getShowtimesMovies() const;
     void setSessionName(const string& sessionName);
     void setMovie(Movie *movie);
     void setScreen(int screen);
