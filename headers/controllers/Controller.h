@@ -19,13 +19,17 @@ private:
     void runMainMenu();
     void runMoviesMenu();
     void runBuyTicketsMenu();
-    void runListSessionsMenu();
+    void runListSessionsMenu(Movie* movie);
     void runSpecificsMenu();
-    void runFindMovie();
+    void runSeatSelectionMenu(SeatLayout *layout);
+    void runBookingMenu(list<Seat *> seats);
+    //void runFindMovie();
     void runUpdateUser();
 public:
     Controller(Cinema& cinema);
     void run();
+
+
 };
 
 

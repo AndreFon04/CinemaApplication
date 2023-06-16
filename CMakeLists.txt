@@ -121,7 +121,7 @@ set(SOURCE_FILES
         ${PROJECT_HEADERS_DIR}/CinemaOld.h
         ${PROJECT_SOURCES_DIR}/CinemaOld.cpp
         ${PROJECT_HEADERS_DIR}/Bilhete.h
-        ${PROJECT_SOURCES_DIR}/Bilhete.cpp sources/exceptions/DuplicatedDataException.cpp headers/exceptions/DuplicatedDataException.h headers/model/BookingContainer.h sources/model/BookingContainer.cpp)
+        ${PROJECT_SOURCES_DIR}/Bilhete.cpp sources/exceptions/DuplicatedDataException.cpp headers/exceptions/DuplicatedDataException.h headers/model/BookingContainer.h sources/model/BookingContainer.cpp headers/model/SeatLayout.h sources/model/SeatLayout.cpp)
 
 add_executable(
         CinemaApplication

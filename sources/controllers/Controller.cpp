@@ -97,15 +97,9 @@ void Controller::runMainMenu(){
         switch(op){
             case 1:
                 runMoviesMenu();
-                cout << "Escolhida opção 1" << endl;
                 break;
             case 2:
-                //runFindMovie();
-                cout << "Escolhida opção 2" << endl;
-                break;
-            case 3:
                 runUpdateUser();
-                cout << "Escolhida opção 3" << endl;
                 break;
             default:
                 break;
@@ -123,11 +117,11 @@ void Controller::runMoviesMenu(){
         switch(op){
             case 1:
                 runBuyTicketsMenu();
-                cout << "Escolhida opção 1" << endl;
+                //cout << "Escolhida opção 1" << endl;
                 break;
             case 2:
                 runSpecificsMenu();
-                cout << "Escolhida opção 2" << endl;
+                //cout << "Escolhida opção 2" << endl;
                 break;
             default:
                 break;
@@ -140,17 +134,65 @@ void Controller::runBuyTicketsMenu(){
     MovieContainer &container = this->model.getMovieContainer();
     list<Movie> movies = container.getAll();
     do{
-
         op=this->view.BuyTicketsMenu(movies);
         Movie* movie = container.getOrder(op - 1);
         // Listar Showtimes do movie
         // obter o container showtimes, iterator por todos e listar os que tem getMovie() == movie
-        ShowtimeContainer &container = this->model.getShowtimeContainer();
-        list<Showtime> showtimes = container.getShowtimesMovie(movie);
-        this->view.printShowtimes(showtimes);
-
+        runListSessionsMenu(movie);
+        //this->view.ListSessionsMenu();
     }while(op != 0);
 }
+
+void Controller::runListSessionsMenu(Movie* movie){
+    int op = -1;
+    ShowtimeContainer &container = this->model.getShowtimeContainer();
+    list<Showtime> showtimes = container.getShowtimesMovie(movie);
+    do{
+        op=this->view.ListSessionsMenu(showtimes);
+        if ( op > 0) {
+            list<Showtime>::iterator it = showtimes.begin();
+            for (int n = op; (--n > 0) && (it != showtimes.end()); ++it) {
+                //do nothing
+            }
+            runSeatSelectionMenu(it->getSeatLayout());
+        }
+    }while(op != 0);
+}
+
+
+void Controller::runSeatSelectionMenu(SeatLayout* layout){
+    int op = -1; int row, column; string s;
+    //ShowtimeContainer &container = this->model.getShowtimeContainer();
+    //list<Showtime> showtimes = container.getShowtimesMovie(movie);
+    list<Seat *> seats; Seat* seat;
+    do{
+        s = this->view.SeatSelectionMenu(layout);
+        //check isSeatValid(s)
+        if (layout->getSeatRowColIsValid(row, column, s)) {
+            seat = layout->getSeat(row, column);
+            if (seat->isUnavailable() || seat->isOccupied()) {
+                cout << "\nInvalid seat\n";
+            }else{
+                seat->setSelected(true);
+                seats.push_back(seat);
+            }
+        } else {
+            if (s != "0") {
+                cout << "\nInvalid seat\n";
+            }
+        }
+    }while(s != "0");
+    if (!seats.empty()) {
+        runBookingMenu(seats);
+    }
+}
+
+
+void Controller::runBookingMenu(list<Seat *> seats)
+{
+    this->view.BookingMenu(seats);
+}
+
 
 void Controller::runSpecificsMenu(){
     int op = -1;
@@ -158,40 +200,11 @@ void Controller::runSpecificsMenu(){
     list<Movie> movies = container.getAll();
     do{
         op=this->view.SpecificsMenu(movies);
-        switch(op){
-            case 1:
-                runListSessionsMenu();
-                cout << "Escolhida opção 1" << endl;
-                break;
-            case 2:
-                //runCreate();
-                cout << "Escolhida opção 2" << endl;
-                break;
-            default:
-                break;
+        if (op != 0){
+            this->view.printMovieSpecifics(movies, op);
         }
     }while(op != 0);
 }
-
-void Controller::runListSessionsMenu(){
-    int op = -1;
-    do{
-        op=this->view.ListSessionsMenu();
-        switch(op){
-            case 1:
-                //runMovies();
-                cout << "Escolhida opção 1" << endl;
-                break;
-            case 2:
-                //runCreate();
-                cout << "Escolhida opção 2" << endl;
-                break;
-            default:
-                break;
-        }
-    }while(op != 0);
-}
-
 /*
 void Controller::runFindMovie(){
     int op = -1;

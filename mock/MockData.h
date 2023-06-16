@@ -20,27 +20,35 @@ private:
             {"user01", "user01@cineclube.pt", "user01"}
     };
 */
-    const vector<User> initialUsers = {
-            {"admin", "admin@cineclube.pt", "admin"},
-            {"user01", "user01@cineclube.pt", "user01"}
-    };
-
-    const vector<vector<string>> initialMovies1 = {
-            {"Super Mario Bros. - O Filme", "Da Nintendo e Illumination, chega a mais aguardada animação baseada no universo Super Mario Bros. O mundo conheceu Mario pela primeira vez no videojogo de 1981, Donkey Kong, e rapidamente se apaixonou pela icónica personagem que veio a acompanhar o crescimento de gerações desde a década de 80. Depois de mais de 200 videojogos relacionados com o franchise Mario, incluindo o célebre Super Mario Bros., de 1985, e de ter assegurado o título de franchise de videojogo mais vendido de sempre, o adorado personagem vermelho chega pela primeira vez ao grande ecrã. ", "Animação"},
-            {"Guardiões da Galáxia: Volume 3", "O nosso amado grupo de desajustados está bastante diferente nos dias de hoje. Peter Quill, que ainda está a recuperar da perda de Gamora, tem que reunir a sua equipa para defender o universo e proteger um dos seus. Uma missão que, se não for concluída com sucesso, pode levar ao fim dos Guardiões como os conhecemos. Um filme de James Gunn. ", "Aventura"},
-            {"Homem-Aranha: Através do Aranhaverso", "Miles Morales regressa para o próximo capítulo da saga Universo-Aranha, vencedora de um Óscar. Uma aventura épica que transportará o amigo da vizinhança de Brooklyn, Homem-Aranha, através do Multiverso para unir forças com Gwen Stacy e uma nova equipa de Pessoas-Aranha. Miles, Gwen e esta equipa irão enfrentar um vilão muito mais poderoso do que qualquer outro antes encontrado. ", "Animação"},
+    const vector<User> initialUsers =
+    {
+            {"admin", "admin@cineclubeisep.pt", "admin"},
+            {"user01", "user01@cineclubeisep.pt", "user01"},
+            {"u", "u@cineclubeisep.pt", "u"}
 
     };
 
-    const vector<vector<int>> initialMovies2 = {
-            {93, 6},
-            {149, 12},
-            {140, 12},
+    const vector<Movie> initialMovies =
+    {
+            {"Super Mario Bros. - O Filme", "Da Nintendo e Illumination, chega a mais aguardada animação baseada no universo Super Mario Bros. O mundo conheceu Mario pela primeira vez no videojogo de 1981, Donkey Kong, e rapidamente se apaixonou pela icónica personagem que veio a acompanhar o crescimento de gerações desde a década de 80. Depois de mais de 200 videojogos relacionados com o franchise Mario, incluindo o célebre Super Mario Bros., de 1985, e de ter assegurado o título de franchise de videojogo mais vendido de sempre, o adorado personagem vermelho chega pela primeira vez ao grande ecrã. ", "Animação", 93, 6},
+            {"Guardiões da Galáxia: Volume 3", "O nosso amado grupo de desajustados está bastante diferente nos dias de hoje. Peter Quill, que ainda está a recuperar da perda de Gamora, tem que reunir a sua equipa para defender o universo e proteger um dos seus. Uma missão que, se não for concluída com sucesso, pode levar ao fim dos Guardiões como os conhecemos. Um filme de James Gunn. ", "Aventura", 149, 12},
+            {"Homem-Aranha: Através do Aranhaverso", "Miles Morales regressa para o próximo capítulo da saga Universo-Aranha, vencedora de um Óscar. Uma aventura épica que transportará o amigo da vizinhança de Brooklyn, Homem-Aranha, através do Multiverso para unir forças com Gwen Stacy e uma nova equipa de Pessoas-Aranha. Miles, Gwen e esta equipa irão enfrentar um vilão muito mais poderoso do que qualquer outro antes encontrado. ", "Animação", 140, 12},
 
+    };
+
+    vector<Movie*> ptrMovies = {NULL, NULL, NULL};
+
+    const vector<vector<vector<int>>> unavailableSeats = {
+            {{0,7},{0,8},{1,7},{1,8},{2,7},{2,8},{3,7},{3,8},{4,7},{4,8},{5,7},{5,8},{6,7},{6,8},{7,7},{7,8},{1,16},{1,15},{2,16},{2,15},{3,16},{3,15},{4,16},{4,15},{5,16},{5,15}},
+            {{1,7},{1,8},{2,7},{2,8},{3,7},{3,8},{4,7},{4,8},{5,7},{5,8},{6,7},{6,8},{1,2},{1,1},{2,2},{2,1},{3,2},{3,1},{4,2},{4,1}}
     };
 
 
 
+
+    void insertUsers(UserContainer& container);
+    void insertMovies(MovieContainer& container);
+    void insertShowtimes(ShowtimeContainer& container);
     /*
 
     const int ENROLLS_NR = 5;
@@ -66,8 +74,7 @@ private:
 
 public:
     void generateData(Cinema& cinema);
-    void insertUsers(UserContainer& container);
-    void insertMovies(MovieContainer& container);
+
 };
 
 

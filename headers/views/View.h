@@ -10,6 +10,8 @@
 #include "Cinema.h"
 #include "Movie.h"
 #include "Showtime.h"
+#include "SeatLayout.h"
+#include "Seat.h"
 
 class View
 {
@@ -20,13 +22,17 @@ public:
     int WelcomeScreen();
     int MainMenu();
     int MoviesMenu(list<Movie>& movies);
-    void printMovies(list<Movie>& movies);
-    void printShowtimes(list<Showtime> showtimes);
     int BuyTicketsMenu(list<Movie>& movies);
-    int ListSessionsMenu();
+    int ListSessionsMenu(list<Showtime> showtimes);
     int SpecificsMenu(list<Movie>& movies);
+    string SeatSelectionMenu(SeatLayout* layout);
+    string BookingMenu(list<Seat*> seats);
     //int  FindMovie();
     int UpdateUser();
+    void printMovies(list<Movie>& movies);
+    void printShowtimes(list<Showtime> showtimes);
+    void printMovieSpecifics(list<Movie>& movies, int index);
+    void printSeatLayout(SeatLayout* seatLayout);
 
 };
 

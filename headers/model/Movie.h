@@ -19,6 +19,7 @@ private:
     int minimalAge;
 public:
     Movie(const string& title, const string& description, const string& genre, int duration, int minimalAge);
+    Movie(const Movie& obj);
     string getTitle() const;
     string getDescription() const;
     string getGenre() const;

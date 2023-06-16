@@ -4,13 +4,22 @@
 
 #include "Showtime.h"
 
-Showtime::Showtime(Movie *movie, const string& sessionName, int screen, int availableSeats)
+Showtime::Showtime(const string& sessionName, Movie *movie, int screen, int availableSeats, const SeatLayout& seatLayout)
 {
-    this->movie = (Movie *) movie;
     this->sessionName = sessionName;
+    this->movie = movie;
     this->screen = screen;
     this->availableSeats = availableSeats;
-    return;
+    this->seatLayout = seatLayout;
+}
+
+Showtime::Showtime(const Showtime& obj)
+{
+    this->sessionName = obj.sessionName;
+    this->movie = obj.movie;
+    this->screen = obj.screen;
+    this->availableSeats = obj.availableSeats;
+    this->seatLayout = obj.seatLayout;
 }
 
 Movie* Showtime::getMovie() const
@@ -37,9 +46,9 @@ int Showtime::getAvailableSeats() const
 }
 
 
-int Showtime::getShowtimesMovies() const
+SeatLayout* Showtime::getSeatLayout()
 {
-    return this->showtimeMovies;
+    return &this->seatLayout;
 }
 
 void Showtime::setMovie(Movie *movie)
@@ -60,4 +69,9 @@ void Showtime::setScreen(int screen)
 void Showtime::setAvailableSeats(int availableSeats)
 {
     this->availableSeats = availableSeats;
+}
+
+void Showtime::setSeatLayout(SeatLayout* seatLayout)
+{
+    this->seatLayout = *seatLayout;
 }

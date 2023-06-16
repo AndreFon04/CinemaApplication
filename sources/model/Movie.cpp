@@ -11,7 +11,15 @@ Movie::Movie(const string& title, const string& description, const string& genre
     this->genre = genre;
     this->duration = duration;
     this->minimalAge = minimalAge;
-    return;
+}
+
+Movie::Movie(const Movie& obj)
+{
+    this->title = obj.title;
+    this->description = obj.description;
+    this->genre = obj.genre;
+    this->duration = obj.duration;
+    this->minimalAge = obj.minimalAge;
 }
 
 string Movie::getTitle() const

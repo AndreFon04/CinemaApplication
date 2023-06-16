@@ -16,26 +16,35 @@ void  MockData::insertUsers(UserContainer& container){
 }
 
 void  MockData::insertMovies(MovieContainer& container){
-    for (size_t  i = 0; i < this->initialMovies1.size(); i++){
-        Movie obj(this->initialMovies1[i][0],this->initialMovies1[i][1],this->initialMovies1[i][2],this->initialMovies2[i][0],this->initialMovies2[i][1]);
+    for (size_t  i = 0; i < this->initialMovies.size(); i++){
+        Movie obj(this->initialMovies[i]);
         container.add(obj);
+        // save movies ptr
+        this->ptrMovies[i] = container.get(this->initialMovies[i].getTitle());
     }
 }
-/*
-void  MockData::insertInstructors(InstructorContainer& container){
-    for (size_t i = 0; i < name_profs.size();i++){
-        Instructor obj(initial_profs[i],name_profs[i]);
-        try{
-            container.add(obj);
-        }catch(DuplicatedDataException& e){
-            //do nothing
-        }
+
+void  MockData::insertShowtimes(ShowtimeContainer& container){
+    SeatLayout layout(9, 17);
+    for (size_t i = 0; i < this->unavailableSeats[0].size(); i++) {
+        layout.setUnavailable(this->unavailableSeats[0][i][0], this->unavailableSeats[0][i][1], true);
     }
+    Showtime obj("Fri-S1-1500", ptrMovies[1], 1, 32, layout);
+    container.add(obj);
+    Showtime obj2("Fri-S1-1800", ptrMovies[1], 1, 32, layout);
+    container.add(obj2);
+    SeatLayout layout2(7, 15);
+    for (size_t i = 0; i < this->unavailableSeats[1].size(); i++) {
+        layout2.setUnavailable(this->unavailableSeats[1][i][0], this->unavailableSeats[1][i][1], true);
+    }
+    Showtime obj3("Fri-S2-1530", ptrMovies[0], 2, 64, layout2);
+    container.add(obj3);
 }
-*/
+
 
 void  MockData::generateData(Cinema& cinema){
 
     insertUsers(cinema.getUserContainer());
     insertMovies(cinema.getMovieContainer());
+    insertShowtimes(cinema.getShowtimeContainer());
 }

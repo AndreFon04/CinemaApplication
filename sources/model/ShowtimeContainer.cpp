@@ -27,7 +27,14 @@ list<Showtime> ShowtimeContainer::getAll()
 
 list<Showtime> ShowtimeContainer::getShowtimesMovie(Movie* movie)
 {
-
+    list<Showtime> newlist;
+    list<Showtime>::iterator it = this->showtimes.begin();
+    for (; it != this->showtimes.end(); ++it){
+        if(it->getMovie()->getTitle() == movie->getTitle()){
+            newlist.push_back(*it);
+        }
+    }
+    return newlist;
 }
 
 Showtime* ShowtimeContainer::get(const string& name)
@@ -36,6 +43,7 @@ Showtime* ShowtimeContainer::get(const string& name)
     if(it != this->showtimes.end()){
         return &(*it);
     }
+    return NULL;
 }
 
 void ShowtimeContainer::add(const Showtime& obj)
