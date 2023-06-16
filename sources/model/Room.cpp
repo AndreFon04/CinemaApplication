@@ -37,7 +37,7 @@ void Room::ShowRoom() {
         cout << endl;
     }
 
-    cout << "     ";
+    cout << "\n" << "     ";
     for (i = 0; i < C-2; i++) {
         cout << "--";
     }
