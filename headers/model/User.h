@@ -15,6 +15,7 @@ private:
     string name;
     string email;
     string pwd;
+    // bool admin;
     //PaymentDetails* payment_info;
 
 public:

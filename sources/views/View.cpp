@@ -3,6 +3,8 @@
 //
 
 #include <iostream>
+#include <ctime>
+#include <chrono>
 #include <list>
 #include "View.h"
 #include <string>
@@ -48,6 +50,28 @@ int View::MainMenu()
     return op;
 }
 
+void View::printTickets(Showtime* showtime, list<Seat *> seats)
+{
+
+    cout << "Enjoy your movie and come back anytime\n";
+    cout << "\n--- Tickets ---\n";
+    // recolher info comum
+    string title = showtime->getMovie()->getTitle();
+    int screen = showtime->getScreen();
+    string showtimeName = showtime->getSessionName();
+
+    for (list<Seat*>::iterator it = seats.begin(); it != seats.end(); ++it) {
+        // recolher info específica de cada um
+        int row = (*it)->getRow();
+        int column = (*it)->getColumn();
+        string seat = (*it)->getRowColumn();
+        // imprimir bilhete formatado
+        cout << "\n\t" << title << "\n";
+        cout << "\nScreen: " << screen << " / Time: " << currentTime() << "\n";
+        cout << "Row: " << row << "  Seat: " << column << "\n";
+        cout << "\n--- // ---\n";
+    }
+}
 
 void View::printMovies(list<Movie>& movies)
 {
@@ -161,16 +185,8 @@ int View::SpecificsMenu(list<Movie>& movies)
 int View::ListSessionsMenu(list<Showtime> showtimes)
 {
     int op = -1;
-    /*SeatLayout layout(10, 15);
-    layout.setUnavailable(0, 0, true);
-    layout.setUnavailable(0, 14, true);
-    layout.setUnavailable(0, 6, true);*/
-
-    //print list of sessions
     do{
         cout << "\n\n********** Session Selection Menu **********\n\n";
-        //printSeatLayout(&layout);
-        //printShowtimes(showtimes);
         if (!showtimes.empty()) {
             this->printShowtimes(showtimes);
         }
@@ -194,9 +210,9 @@ string View::SeatSelectionMenu(SeatLayout* layout)
 
 }
 
-string View::BookingMenu(list<Seat*> seats)
+bool View::BookingMenu(Showtime* showtime, list<Seat*> seats)
 {
-    string s;
+    string s, cardNum, expMon, expYear, cvv;
     do {
         cout << "Selected seats: ";
         for (list<Seat *>::iterator it = seats.begin(); it != seats.end(); ++it) {
@@ -213,13 +229,38 @@ string View::BookingMenu(list<Seat*> seats)
             (*it)->setSelected(false);
         }
 
-        return "xx";
+        return false;
     }
+    cout << "\nInsert payment details\n";
+    cardNum = Utils::getString("Card number");
+    expMon = Utils::getString("Expiration Month");
+    expYear = Utils::getString("Expiration Year");
+    cvv = Utils::getString("CVV");
 
-    // booking
+    bool auth = authorizeCardPayment(cardNum, expMon, expYear, cvv);
+    if (!auth){
+        // Insucesso no pagamento
+        cout << "\nPayment failed!!!\n";
+    }else{
+        cout << "\nPayment successful\n";
+        printTickets(showtime, seats);
+    }
+    return auth;
 }
 
+bool View::authorizeCardPayment(const string& cardNum, const string& expMon, const string& expYear, const string& cvv)
+{
+    // Dummy function
+    return true;
+}
 
+string View::currentTime()
+{
+    chrono::system_clock::time_point now = chrono::system_clock::now();
+    time_t currentTime = chrono::system_clock::to_time_t(now);
+    string timeString = ctime(&currentTime);
+    return timeString;
+}
 
 /*
 int View::FindMovie()
@@ -234,18 +275,18 @@ int View::FindMovie()
 }
 */
 
-
+/*
 int View::UpdateUser()
 {
     int op = -1;
     do{
         cout << "\n\nWhat is your new email/password?: ";
         cout << "\n0 - RETURN\n";
-        op = Utils::getNumber("Option");
-    }while(op < 0 || op > 2 /* > do o numero de filmes disponiveis (atualizados)*/);
+        op = Utils::getString("What is your new email/password?");
+    }while(op < 0 || op > 2 );
     return op;
 }
-
+*/
 
 
 /*

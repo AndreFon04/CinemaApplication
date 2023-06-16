@@ -25,7 +25,7 @@ const string& Cinema::getName() const
 
 void Cinema::setName(const string &name)
 {
-    return;
+    this->name = name;;
 }
 
 UserContainer & Cinema::getUserContainer()
@@ -41,4 +41,9 @@ MovieContainer & Cinema::getMovieContainer()
 ShowtimeContainer & Cinema::getShowtimeContainer()
 {
     return this->showtimes;
+}
+
+BookingContainer & Cinema::getBookingContainer()
+{
+    return this->bookings;
 }

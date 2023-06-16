@@ -5,8 +5,17 @@
 #include <array>
 using namespace std;
 
+<<<<<<< HEAD
 class PaymentInfo {
 public:
+=======
+class PaymentDetails {
+
+public:
+    string card_number;
+    expiration_date;
+    string cvv;
+>>>>>>> 298bcca (eighth commit)
 
     struct payment_info {
         int card_number;

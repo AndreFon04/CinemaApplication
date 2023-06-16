@@ -18,6 +18,7 @@ class View
 
 private:
 
+
 public:
     int WelcomeScreen();
     int MainMenu();
@@ -26,14 +27,18 @@ public:
     int ListSessionsMenu(list<Showtime> showtimes);
     int SpecificsMenu(list<Movie>& movies);
     string SeatSelectionMenu(SeatLayout* layout);
-    string BookingMenu(list<Seat*> seats);
+    bool BookingMenu(Showtime* showtime, list<Seat*> seats);
     //int  FindMovie();
     int UpdateUser();
+    void printTickets(Showtime* showtime, list<Seat *> seats);
     void printMovies(list<Movie>& movies);
     void printShowtimes(list<Showtime> showtimes);
     void printMovieSpecifics(list<Movie>& movies, int index);
     void printSeatLayout(SeatLayout* seatLayout);
+    string currentTime();
 
+
+    bool authorizeCardPayment(const string& cardNum, const string& expMon, const string& expYear, const string& cvv);
 };
 
 

@@ -15,20 +15,21 @@ class Controller{
 private:
     Cinema model;
     View view;
+    User* currentUser;
     void runLogin();
     void runMainMenu();
     void runMoviesMenu();
     void runBuyTicketsMenu();
     void runListSessionsMenu(Movie* movie);
     void runSpecificsMenu();
-    void runSeatSelectionMenu(SeatLayout *layout);
-    void runBookingMenu(list<Seat *> seats);
+    void runSeatSelectionMenu(Showtime* showtime);
+    void runBookingMenu(Showtime* showtime, list<Seat *> seats);
     //void runFindMovie();
     void runUpdateUser();
+
 public:
     Controller(Cinema& cinema);
     void run();
-
 
 };
 

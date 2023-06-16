@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <string>
-#include <tuple>
 #include "Utils.h"
 #include "Controller.h"
 #include "View.h"
@@ -21,6 +20,7 @@ Controller::Controller(Cinema& cinema){
 void Controller::run(){
     int op = -1;
     do{
+        this->currentUser = NULL;
         op=this->view.WelcomeScreen();
         switch(op){
             case 1:
@@ -69,12 +69,10 @@ void Controller::run(){
 void Controller::runLogin() {
     bool ok = false;
 
-    string user = Utils::getString("\nEnter your username: ");
-    string pwd = Utils::getString("Enter your password: ");
+    string user = Utils::getString("\nEnter your username");
+    string pwd = Utils::getString("Enter your password");
 
     UserContainer &container = this->model.getUserContainer();
-    //  User obj("user01", "email", "user01");
-    //  container.add(obj);
     User *ptr = container.get(user);
 
     if (ptr != NULL) {
@@ -82,7 +80,12 @@ void Controller::runLogin() {
     }
     if (ok){
         //Login accepted
-        runMainMenu();
+        this->currentUser = ptr;
+        //if (ptr->isAdmin()) {
+        //    runAdminMenu()
+        //} else {
+            runMainMenu();
+        //}
     }else{
         // Login rejected
         cout << "\n\n**User or password invalid**\n\n";
@@ -99,7 +102,7 @@ void Controller::runMainMenu(){
                 runMoviesMenu();
                 break;
             case 2:
-                runUpdateUser();
+                //runUpdateUser();
                 break;
             default:
                 break;
@@ -154,17 +157,18 @@ void Controller::runListSessionsMenu(Movie* movie){
             for (int n = op; (--n > 0) && (it != showtimes.end()); ++it) {
                 //do nothing
             }
-            runSeatSelectionMenu(it->getSeatLayout());
+            runSeatSelectionMenu(&(*it));
         }
     }while(op != 0);
 }
 
 
-void Controller::runSeatSelectionMenu(SeatLayout* layout){
+void Controller::runSeatSelectionMenu(Showtime* showtime){
     int op = -1; int row, column; string s;
     //ShowtimeContainer &container = this->model.getShowtimeContainer();
     //list<Showtime> showtimes = container.getShowtimesMovie(movie);
     list<Seat *> seats; Seat* seat;
+    SeatLayout* layout = showtime->getSeatLayout();
     do{
         s = this->view.SeatSelectionMenu(layout);
         //check isSeatValid(s)
@@ -183,14 +187,24 @@ void Controller::runSeatSelectionMenu(SeatLayout* layout){
         }
     }while(s != "0");
     if (!seats.empty()) {
-        runBookingMenu(seats);
+        runBookingMenu(showtime, seats);
     }
 }
 
 
-void Controller::runBookingMenu(list<Seat *> seats)
+void Controller::runBookingMenu(Showtime* showtime, list<Seat *> seats)
 {
-    this->view.BookingMenu(seats);
+    bool auth = this->view.BookingMenu(showtime, seats);
+
+    if(auth){
+        //do booking
+        for (list<Seat *>::iterator it = seats.begin(); it != seats.end(); ++it) {
+            (*it)->setOccupied(true);
+            (*it)->setSelected(false);
+        }
+        Booking obj(this->currentUser, showtime, seats);
+        this->model.getBookingContainer().add(obj);
+    }
 }
 
 
@@ -205,6 +219,7 @@ void Controller::runSpecificsMenu(){
         }
     }while(op != 0);
 }
+
 /*
 void Controller::runFindMovie(){
     int op = -1;
@@ -217,7 +232,7 @@ void Controller::runFindMovie(){
     }while(op != 0);
 }
 */
-
+/*
 void Controller::runUpdateUser(){
     int op = -1;
     do{
@@ -228,3 +243,5 @@ void Controller::runUpdateUser(){
         }
     }while(op != 0);
 }
+*/
+
