@@ -15,6 +15,10 @@ void Room::CreateRoom() {
             room[i][j] = 'O';
         }
     }
+}
+
+void Room::ShowRoom() {
+    int i, j;
 
     cout << "    ";
     for (i = 0; i < C; i++) {
