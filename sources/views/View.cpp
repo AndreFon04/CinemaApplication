@@ -17,14 +17,10 @@ int View::WelcomeScreen()
     int op = -1;
     do {
         cout << "\n\n";
-        cout << "   _____      _         _                                _           _         _   \n";
-        cout << "  / ____|    (_)       | |                              (_)         | |       | |  \n";
-        cout << " | (___   ___ _  __ _  | |__   ___ _ __ ___       __   ___ _ __   __| | ___   | |  \n";
-        cout << "  \\___ \\ / _ \\ |/ _` | | '_ \\ / _ \\ '_ ` _ \\  ____\\ \\ / / | '_ \\ / _` |/ _ \\  | |  \n";
-        cout << "  ____) |  __/ | (_| | | |_) |  __/ | | | | ||____|\\ V /| | | | | (_| | (_) | |_|  \n";
-        cout << " |_____/ \\___| |\\__,_| |_.__/ \\___|_| |_| |_|       \\_/ |_|_| |_|\\__,_|\\___/  (_)  \n";
-        cout << "            _/ |                                                                   \n";
-        cout << "           |__/                                                                    \n";
+        cout << " __      __   _                    _         _   _          _            _        _                       _        _                   _ \n";
+        cout << " \\ \\    / /__| |__ ___ _ __  ___  | |_ ___  | |_| |_  ___  | |__  ___ __| |_   __(_)_ _  ___ _ __  __ _  (_)_ _   | |_ _____ __ ___ _ | |\n";
+        cout << "  \\ \\/\\/ / -_) / _/ _ \\ '  \\/ -_) |  _/ _ \\ |  _| ' \\/ -_) | '_ \\/ -_|_-<  _| / _| | ' \\/ -_) '  \\/ _` | | | ' \\  |  _/ _ \\ V  V / ' \\|_|\n";
+        cout << "   \\_/\\_/\\___|_\\__\\___/_|_|_\\___|  \\__\\___/  \\__|_||_\\___| |_.__/\\___/__/\\__| \\__|_|_||_\\___|_|_|_\\__,_| |_|_||_|  \\__\\___/\\_/\\_/|_||_(_)\n";
         cout << "\n\n";
         cout << "1 - log into your account\n";
         cout << "2 - create an account\n";
@@ -52,9 +48,9 @@ int View::MainMenu()
 
 void View::printTickets(Showtime* showtime, list<Seat *> seats)
 {
-
-    cout << "Enjoy your movie and come back anytime\n";
-    cout << "\n--- Tickets ---\n";
+    int w = 42;
+    cout << "\nEnjoy your movie and come back anytime\n\n\n";
+    cout << "\n              --- Tickets ---\n";
     // recolher info comum
     string title = showtime->getMovie()->getTitle();
     int screen = showtime->getScreen();
@@ -66,10 +62,13 @@ void View::printTickets(Showtime* showtime, list<Seat *> seats)
         int column = (*it)->getColumn();
         string seat = (*it)->getRowColumn();
         // imprimir bilhete formatado
-        cout << "\n\t" << title << "\n";
+
+        string s((w-title.size())/2, ' ');
+        cout << endl << s << title << "\n\n";
         cout << "\nScreen: " << screen << " / Time: " << currentTime() << "\n";
-        cout << "Row: " << row << "  Seat: " << column << "\n";
-        cout << "\n--- // ---\n";
+        string s2(13, ' ');
+        cout << s2 << "Row: " << (char) (row + 'A') + 1 << "  Seat: " << column + 1 << "\n";
+        cout << "\n                --- // ---\n\n";
     }
 }
 
@@ -107,9 +106,9 @@ void View::printShowtimes(list<Showtime> showtimes)
 }
 
 void View::printSeatLayout(SeatLayout* seatLayout) {
-    cout << "*****************************************************\n";
-    cout << "****************** Screen *********************\n";
-    cout << "**********************************************\n";
+    cout << "***************************************************\n";
+    cout << "  ****************** Screen *********************\n";
+    cout << "    *******************************************\n\n";
     for (int i = 0; i < seatLayout->getNumberOfRows(); i++) {
         cout << (char) ('A' + i) << "   ";
         for (int j = seatLayout->getNumberOfColumns(i) - 1; j >= 0; j--) {
@@ -170,9 +169,7 @@ int View::SpecificsMenu(list<Movie>& movies)
     int op = -1;
     do{
         cout << "\n\n********** Specifics Menu **********\n\n";
-        //print list of movies
         printMovies(movies);
-        //cout << "\n\nWhat movie would you like to know more about?: " << op;
         cout << "\n*Press 0 to RETURN*\n\n";
         op = Utils::getNumber("What movie would you like to know more about?");
         cout << "\n\n";
@@ -203,7 +200,7 @@ int View::ListSessionsMenu(list<Showtime> showtimes)
 string View::SeatSelectionMenu(SeatLayout* layout)
 {
     this->printSeatLayout(layout);
-    cout << "\n\n*Press 0 to RETURN*\n\n";
+    cout << "\n\n*Press 0 to CONTINUE*\n\n";
     string s = Utils::getString("Select your seat (e.g. A1)");
     cout << "\n\n";
     return s;

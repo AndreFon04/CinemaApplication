@@ -26,37 +26,31 @@ void Controller::run(){
             case 1:
                 runLogin();
                 break;
-            case 2: {
+            case 3: {
                 // MOCK: list users
                 UserContainer &container = this->model.getUserContainer();
                 list<User> users = container.getAll();
                 for (list<User>::iterator it = users.begin(); it != users.end(); ++it) {
                     cout << it->getName() << " " << it->getEmail() << " " << it->getPwd() << endl;
                 }
-
-                cout << "Escolhida opção 2" << endl;
                 break;
             }
-            case 3: {
+            case 4: {
                 // MOCK: list movies
                 MovieContainer &container = this->model.getMovieContainer();
                 list<Movie> movies = container.getAll();
                 for (list<Movie>::iterator it = movies.begin(); it != movies.end(); ++it) {
                     cout << it->getTitle() << " " << it->getDescription() << " " << it->getGenre() << " " << it->getDuration() << " " << it->getMinimalAge() << endl;
                 }
-
-                cout << "Escolhida opção 3" << endl;
                 break;
             }
-            case 4: {
+            case 5: {
                 // MOCK: list sessions
                 ShowtimeContainer &container = this->model.getShowtimeContainer();
                 list<Showtime> showtimes = container.getAll();
                 for (list<Showtime>::iterator it = showtimes.begin(); it != showtimes.end(); ++it) {
                     cout << it->getMovie() << " " << it->getSessionName() << " " << it->getScreen() << " " << it->getAvailableSeats() << endl;
                 }
-
-                cout << "Escolhida opção 4" << endl;
                 break;
             }
             default:

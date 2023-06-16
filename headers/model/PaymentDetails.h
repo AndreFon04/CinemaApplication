@@ -1,6 +1,6 @@
 #ifndef FIRSTPROJECT_PAYMENTINFO_H
 #define FIRSTPROJECT_PAYMENTINFO_H
-
+/*
 #include <iostream>
 #include <array>
 using namespace std;
@@ -27,5 +27,5 @@ public:
 
     void AccountgetP_Info();
 };
-
+*/
 #endif //FIRSTPROJECT_PAYMENTINFO_H
