@@ -16,7 +16,7 @@ void Room::CreateRoom() {
         }
     }
 
-    cout << "   ";
+    cout << "    ";
     for (i = 0; i < C; i++) {
         cout << alphabet[i] << " ";
     }
