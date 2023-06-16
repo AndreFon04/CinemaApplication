@@ -5,11 +5,8 @@
 #include <array>
 using namespace std;
 
-class User {
-
+class PaymentInfo {
 public:
-    string Name;
-    string Email;
 
     struct payment_info {
         int card_number;
