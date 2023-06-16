@@ -74,3 +74,6 @@
 1	1542	1686947512617465572	CMakeFiles/CinemaApplication.dir/main.cpp.o	79cd63fad9aaebd
 479	1668	1686947512741465197	CMakeFiles/CinemaApplication.dir/sources/views/View.cpp.o	837606e5d486c232
 1206	1758	1686947512833464918	CMakeFiles/CinemaApplication.dir/sources/model/Booking.cpp.o	84a5d1efa9f5c2ad
+2	561	1686948250335947903	CMakeFiles/CinemaApplication.dir/sources/model/UserContainer.cpp.o	65f9aa497c9e5831
+3	791	1686948250567947565	CMakeFiles/CinemaApplication.dir/mock/MockData.cpp.o	5e9e5f567cc77b3a
+3	1050	1686948753563305267	CMakeFiles/CinemaApplication.dir/sources/controllers/Controller.cpp.o	7468c28b17c41073
