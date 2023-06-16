@@ -14,5 +14,6 @@ public:
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
     void CreateRoom();
+    void ShowRoom();
 };
 #endif //FIRSTPROJECT_ROOM_H
