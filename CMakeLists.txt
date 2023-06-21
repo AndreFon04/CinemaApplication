@@ -50,7 +50,9 @@ set(EXCEPTIONS_SOURCE_FILES
         ${PROJECT_SOURCES_EXCEPTIONS_DIR}/InvalidCreditCardException.cpp
         ${PROJECT_SOURCES_EXCEPTIONS_DIR}/RoomAlreadyFullException.cpp
         ${PROJECT_SOURCES_EXCEPTIONS_DIR}/InsufficientCashException.cpp
-        ${PROJECT_SOURCES_EXCEPTIONS_DIR}/UserNotFoundException.cpp)
+        ${PROJECT_SOURCES_EXCEPTIONS_DIR}/UserNotFoundException.cpp
+        ${PROJECT_HEADERS_EXCEPTIONS_DIR}/DuplicatedDataException.h
+        ${PROJECT_SOURCES_EXCEPTIONS_DIR}/DuplicatedDataException.cpp)
 
 
 set(PROJECT_HEADERS_MODEL_DIR
@@ -63,7 +65,6 @@ include_directories(
         ${PROJECT_SOURCES_MODEL_DIR})
 
 set(MODEL_SOURCE_FILES
-
         ${PROJECT_SOURCES_MODEL_DIR}/User.cpp
         ${PROJECT_SOURCES_MODEL_DIR}/Seat.cpp
         ${PROJECT_SOURCES_MODEL_DIR}/Movie.cpp
@@ -83,8 +84,11 @@ set(MODEL_SOURCE_FILES
         ${PROJECT_HEADERS_MODEL_DIR}/MovieContainer.h
         ${PROJECT_SOURCES_MODEL_DIR}/MovieContainer.cpp
         ${PROJECT_SOURCES_MODEL_DIR}/UserContainer.cpp
-        ${PROJECT_SOURCES_MODEL_DIR}/ShowtimeContainer.cpp)
-
+        ${PROJECT_SOURCES_MODEL_DIR}/ShowtimeContainer.cpp
+        ${PROJECT_HEADERS_MODEL_DIR}/BookingContainer.h
+        ${PROJECT_SOURCES_MODEL_DIR}/BookingContainer.cpp
+        ${PROJECT_HEADERS_MODEL_DIR}/SeatLayout.h
+        ${PROJECT_SOURCES_MODEL_DIR}/SeatLayout.cpp)
 
 set(PROJECT_HEADERS_VIEWS_DIR
         ${PROJECT_HEADERS_DIR}/views)
@@ -121,7 +125,7 @@ set(SOURCE_FILES
         ${PROJECT_HEADERS_DIR}/CinemaOld.h
         ${PROJECT_SOURCES_DIR}/CinemaOld.cpp
         ${PROJECT_HEADERS_DIR}/Bilhete.h
-        ${PROJECT_SOURCES_DIR}/Bilhete.cpp sources/exceptions/DuplicatedDataException.cpp headers/exceptions/DuplicatedDataException.h headers/model/BookingContainer.h sources/model/BookingContainer.cpp headers/model/SeatLayout.h sources/model/SeatLayout.cpp)
+        ${PROJECT_SOURCES_DIR}/Bilhete.cpp)
 
 add_executable(
         CinemaApplication

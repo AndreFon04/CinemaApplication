@@ -67,7 +67,8 @@ void View::printTickets(Showtime* showtime, list<Seat *> seats)
         cout << endl << s << title << "\n\n";
         cout << "\nScreen: " << screen << " / Time: " << currentTime() << "\n";
         string s2(13, ' ');
-        cout << s2 << "Row: " << (char) (row + 'A') + 1 << "  Seat: " << column + 1 << "\n";
+        cout << "Seat: " << seat;
+        //cout << s2 << "Row: " << (char) (row + 'A') + 1 << "  Seat: " << column + 1 << "\n";
         cout << "\n                --- // ---\n\n";
     }
 }

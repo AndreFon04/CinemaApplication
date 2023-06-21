@@ -70,27 +70,6 @@ build CMakeFiles/CinemaApplication.dir/sources/Bilhete.cpp.o: CXX_COMPILER__Cine
   OBJECT_DIR = CMakeFiles/CinemaApplication.dir
   OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources
 
-build CMakeFiles/CinemaApplication.dir/sources/exceptions/DuplicatedDataException.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/exceptions/DuplicatedDataException.cpp || cmake_object_order_depends_target_CinemaApplication
-  DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/exceptions/DuplicatedDataException.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/andre/CLionProjects/CinemaApplication/mock -I/home/andre/CLionProjects/CinemaApplication/headers/controllers -I/home/andre/CLionProjects/CinemaApplication/sources/controllers -I/home/andre/CLionProjects/CinemaApplication/headers/exceptions -I/home/andre/CLionProjects/CinemaApplication/sources/exceptions -I/home/andre/CLionProjects/CinemaApplication/headers/model -I/home/andre/CLionProjects/CinemaApplication/sources/model -I/home/andre/CLionProjects/CinemaApplication/headers/views -I/home/andre/CLionProjects/CinemaApplication/sources/views
-  OBJECT_DIR = CMakeFiles/CinemaApplication.dir
-  OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources/exceptions
-
-build CMakeFiles/CinemaApplication.dir/sources/model/BookingContainer.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/model/BookingContainer.cpp || cmake_object_order_depends_target_CinemaApplication
-  DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/model/BookingContainer.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/andre/CLionProjects/CinemaApplication/mock -I/home/andre/CLionProjects/CinemaApplication/headers/controllers -I/home/andre/CLionProjects/CinemaApplication/sources/controllers -I/home/andre/CLionProjects/CinemaApplication/headers/exceptions -I/home/andre/CLionProjects/CinemaApplication/sources/exceptions -I/home/andre/CLionProjects/CinemaApplication/headers/model -I/home/andre/CLionProjects/CinemaApplication/sources/model -I/home/andre/CLionProjects/CinemaApplication/headers/views -I/home/andre/CLionProjects/CinemaApplication/sources/views
-  OBJECT_DIR = CMakeFiles/CinemaApplication.dir
-  OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources/model
-
-build CMakeFiles/CinemaApplication.dir/sources/model/SeatLayout.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/model/SeatLayout.cpp || cmake_object_order_depends_target_CinemaApplication
-  DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/model/SeatLayout.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/andre/CLionProjects/CinemaApplication/mock -I/home/andre/CLionProjects/CinemaApplication/headers/controllers -I/home/andre/CLionProjects/CinemaApplication/sources/controllers -I/home/andre/CLionProjects/CinemaApplication/headers/exceptions -I/home/andre/CLionProjects/CinemaApplication/sources/exceptions -I/home/andre/CLionProjects/CinemaApplication/headers/model -I/home/andre/CLionProjects/CinemaApplication/sources/model -I/home/andre/CLionProjects/CinemaApplication/headers/views -I/home/andre/CLionProjects/CinemaApplication/sources/views
-  OBJECT_DIR = CMakeFiles/CinemaApplication.dir
-  OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources/model
-
 build CMakeFiles/CinemaApplication.dir/sources/views/Utils.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/views/Utils.cpp || cmake_object_order_depends_target_CinemaApplication
   DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/views/Utils.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
@@ -210,6 +189,20 @@ build CMakeFiles/CinemaApplication.dir/sources/model/ShowtimeContainer.cpp.o: CX
   OBJECT_DIR = CMakeFiles/CinemaApplication.dir
   OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources/model
 
+build CMakeFiles/CinemaApplication.dir/sources/model/BookingContainer.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/model/BookingContainer.cpp || cmake_object_order_depends_target_CinemaApplication
+  DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/model/BookingContainer.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/andre/CLionProjects/CinemaApplication/mock -I/home/andre/CLionProjects/CinemaApplication/headers/controllers -I/home/andre/CLionProjects/CinemaApplication/sources/controllers -I/home/andre/CLionProjects/CinemaApplication/headers/exceptions -I/home/andre/CLionProjects/CinemaApplication/sources/exceptions -I/home/andre/CLionProjects/CinemaApplication/headers/model -I/home/andre/CLionProjects/CinemaApplication/sources/model -I/home/andre/CLionProjects/CinemaApplication/headers/views -I/home/andre/CLionProjects/CinemaApplication/sources/views
+  OBJECT_DIR = CMakeFiles/CinemaApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources/model
+
+build CMakeFiles/CinemaApplication.dir/sources/model/SeatLayout.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/model/SeatLayout.cpp || cmake_object_order_depends_target_CinemaApplication
+  DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/model/SeatLayout.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/andre/CLionProjects/CinemaApplication/mock -I/home/andre/CLionProjects/CinemaApplication/headers/controllers -I/home/andre/CLionProjects/CinemaApplication/sources/controllers -I/home/andre/CLionProjects/CinemaApplication/headers/exceptions -I/home/andre/CLionProjects/CinemaApplication/sources/exceptions -I/home/andre/CLionProjects/CinemaApplication/headers/model -I/home/andre/CLionProjects/CinemaApplication/sources/model -I/home/andre/CLionProjects/CinemaApplication/headers/views -I/home/andre/CLionProjects/CinemaApplication/sources/views
+  OBJECT_DIR = CMakeFiles/CinemaApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources/model
+
 build CMakeFiles/CinemaApplication.dir/sources/exceptions/SeatNoLongerAvailableException.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/exceptions/SeatNoLongerAvailableException.cpp || cmake_object_order_depends_target_CinemaApplication
   DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/exceptions/SeatNoLongerAvailableException.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
@@ -245,6 +238,13 @@ build CMakeFiles/CinemaApplication.dir/sources/exceptions/UserNotFoundException.
   OBJECT_DIR = CMakeFiles/CinemaApplication.dir
   OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources/exceptions
 
+build CMakeFiles/CinemaApplication.dir/sources/exceptions/DuplicatedDataException.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/exceptions/DuplicatedDataException.cpp || cmake_object_order_depends_target_CinemaApplication
+  DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/exceptions/DuplicatedDataException.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/andre/CLionProjects/CinemaApplication/mock -I/home/andre/CLionProjects/CinemaApplication/headers/controllers -I/home/andre/CLionProjects/CinemaApplication/sources/controllers -I/home/andre/CLionProjects/CinemaApplication/headers/exceptions -I/home/andre/CLionProjects/CinemaApplication/sources/exceptions -I/home/andre/CLionProjects/CinemaApplication/headers/model -I/home/andre/CLionProjects/CinemaApplication/sources/model -I/home/andre/CLionProjects/CinemaApplication/headers/views -I/home/andre/CLionProjects/CinemaApplication/sources/views
+  OBJECT_DIR = CMakeFiles/CinemaApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles/CinemaApplication.dir/sources/exceptions
+
 build CMakeFiles/CinemaApplication.dir/sources/controllers/Controller.cpp.o: CXX_COMPILER__CinemaApplication_Debug /home/andre/CLionProjects/CinemaApplication/sources/controllers/Controller.cpp || cmake_object_order_depends_target_CinemaApplication
   DEP_FILE = CMakeFiles/CinemaApplication.dir/sources/controllers/Controller.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
@@ -267,7 +267,7 @@ build CMakeFiles/CinemaApplication.dir/mock/MockData.cpp.o: CXX_COMPILER__Cinema
 #############################################
 # Link the executable CinemaApplication
 
-build CinemaApplication: CXX_EXECUTABLE_LINKER__CinemaApplication_Debug CMakeFiles/CinemaApplication.dir/main.cpp.o CMakeFiles/CinemaApplication.dir/sources/CinemaOld.cpp.o CMakeFiles/CinemaApplication.dir/sources/Bilhete.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/DuplicatedDataException.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/BookingContainer.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/SeatLayout.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/Utils.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/View.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/PaymentView.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/ConfirmationView.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/WelcomeScreen.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/MovieListView.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/ShowTimeView.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/User.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Seat.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Movie.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Showtime.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Booking.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/PaymentDetails.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Cinema.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/MovieContainer.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/UserContainer.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/ShowtimeContainer.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/SeatNoLongerAvailableException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/InvalidCreditCardException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/RoomAlreadyFullException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/InsufficientCashException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/UserNotFoundException.cpp.o CMakeFiles/CinemaApplication.dir/sources/controllers/Controller.cpp.o CMakeFiles/CinemaApplication.dir/mock/MockData.cpp.o
+build CinemaApplication: CXX_EXECUTABLE_LINKER__CinemaApplication_Debug CMakeFiles/CinemaApplication.dir/main.cpp.o CMakeFiles/CinemaApplication.dir/sources/CinemaOld.cpp.o CMakeFiles/CinemaApplication.dir/sources/Bilhete.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/Utils.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/View.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/PaymentView.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/ConfirmationView.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/WelcomeScreen.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/MovieListView.cpp.o CMakeFiles/CinemaApplication.dir/sources/views/ShowTimeView.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/User.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Seat.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Movie.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Showtime.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Booking.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/PaymentDetails.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/Cinema.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/MovieContainer.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/UserContainer.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/ShowtimeContainer.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/BookingContainer.cpp.o CMakeFiles/CinemaApplication.dir/sources/model/SeatLayout.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/SeatNoLongerAvailableException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/InvalidCreditCardException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/RoomAlreadyFullException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/InsufficientCashException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/UserNotFoundException.cpp.o CMakeFiles/CinemaApplication.dir/sources/exceptions/DuplicatedDataException.cpp.o CMakeFiles/CinemaApplication.dir/sources/controllers/Controller.cpp.o CMakeFiles/CinemaApplication.dir/mock/MockData.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/CinemaApplication.dir
   POST_BUILD = :
